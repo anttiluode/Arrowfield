@@ -1,0 +1,24 @@
+{
+ "cplx_beta_5": {
+  "corr_absL_I": 0.14476070209706313,
+  "corr_absL_I_live": 0.27063759356735617,
+  "corr_absL_vort": 0.2318078722098095,
+  "corr_absL_vort_live": 0.32280033751343445,
+  "corr_absLreal_I": 0.17505567661525617,
+  "signfrac_L": 0.49737548828125,
+  "signfrac_L_real": 0.0,
+  "n_vortices": 402,
+  "field_std": 0.6515092986734646
+ },
+ "cplx_beta_0": {
+  "corr_absL_I": -0.0830648405468401,
+  "corr_absL_I_live": 0.018776576665256197,
+  "corr_absL_vort": NaN,
+  "corr_absL_vort_live": NaN,
+  "corr_absLreal_I": -0.5776767852356486,
+  "signfrac_L": 0.482177734375,
+  "signfrac_L_real": 0.0,
+  "n_vortices": 0,
+  "field_std": 0.36287973931904105
+ }
+}
