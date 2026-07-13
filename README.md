@@ -126,3 +126,50 @@ Every registered prediction is written in the docstring of the file that tests i
 ---
 
 *The prediction I was proudest of was wrong. The control I threw in out of caution turned out to be the discovery. That has happened before in this program and it will happen again — it is what the ledger is for.*
+
+---
+
+## Addendum — PHASE FROM DELAY (and where phase is born)
+
+`experiments/phase_from_delay.py`
+
+The real-scalar field scored sign fraction **0.000** — no chirality, no arrow, nothing. But that was a fact about *how it was measured*, not about the field. Form the Takens delay pair at each pixel and take its angle:
+
+```
+θ(x,t) = atan2( φ(x, t−τ),  φ(x, t) )
+```
+
+Nothing is added to the field. Only the readout changes.
+
+| | β=5 | β=0 | **shuffled null** |
+|---|--:|--:|--:|
+| delay-phase windings | **1106** | 72 | 2478 / 228 |
+
+**[V] D1 — phase is latent in delay.** A real scalar field carries **1106 integer phase windings** once viewed through its own past. `i` is the operator *"wait a quarter cycle"* — which is exactly what the Hilbert transform is (a −90° shift at every frequency), and the analytic signal `z = φ + i·H[φ]` is literally *the signal plus its own quarter-cycle-delayed self*. **Phase is not an ingredient. It is what memory looks like from the inside.**
+
+**[~/K] D2 — but delay-phase winding is CHEAP.** I hoped it would show the same clean β-dependence as the complex vortices. It does not: β=5 gives 15× more than β=0, **but the shuffled nulls scale the same way** (2478 vs 228). Most of the gap is field amplitude. And the null itself is the finding: **shuffled noise has 2478 windings.** Anything that oscillates has an observer-phase. This partially kills the hope that delay-phase windings and order-parameter vortices are the same object.
+
+### The resolution: two kinds of phase
+
+| | **observer phase** | **medium phase** |
+|---|---|---|
+| what | θ = atan2(φ(t−τ), φ(t)) | winding of a complex order parameter |
+| origin | the act of embedding / the readout | the field itself |
+| cost | **free** — present in pure noise (null: 2478) | **expensive** — β=0 gives **zero** |
+| kin to | Berry, Pancharatnam, the holographic plate | superfluid vortices, the whorl, the fossil |
+| persists without an observer? | **no** | **yes** |
+
+> **Phase is born the moment there is delay. Phase becomes *real* only when the medium slows itself.**
+
+The holographic plate does not *have* phase — the reading manufactures it. That is why a hologram is an *illusion* of a third dimension rather than a third dimension. A self-slowing medium stops needing the observer: the winding is in the field, it survives the freeze (whorl: 88% pinned; Rajapinta exp3: conserved at 0.95), and it has become an **address**.
+
+**The Γ-shell is where observer-phase becomes medium-phase** — where *how you look* turns into *what is there*.
+
+### Prior art, named honestly
+- The mechanism is the **optical Kerr effect** (n = n₀ + n₂·I) → self-focusing → **spatial solitons**; the complex version is the **nonlinear Schrödinger / Gross–Pitaevskii equation**, whose quantized vortices are exactly the 402. This is textbook nonlinear optics and BEC physics. **Rediscovered here, not discovered.** That is the good outcome: it means the substrate is trustworthy.
+- The vacuum version is the **Euler–Heisenberg Lagrangian** — QED vacuum birefringence, photon–photon scattering. *Light does slow light*, extremely weakly.
+- Phase singularities in real scalar wave fields: **Nye & Berry (1974), "Dislocations in wave trains"** — the founding paper of singular optics. D1 is consistent with fifty years of that literature.
+- **Renou et al. (2021)**: real-valued quantum mechanics is experimentally falsified. The complex structure is *necessary*, not conventional.
+- Still not established: that any of this slows the **clock** (g₀₀) rather than a **wave in a medium**. That is the analog-gravity leap, and Volovik's rule binds: kinematics, never dynamics.
+
+![phase from delay](figs/fig4_phase_from_delay.png)
