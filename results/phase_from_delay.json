@@ -1,0 +1,28 @@
+{
+ "beta_5": {
+  "defects": 1106,
+  "defects_over_frames": [
+   1106,
+   1210,
+   1092,
+   1046,
+   1006
+  ],
+  "mean_defects": 1092.0,
+  "shuffled_null": 2478,
+  "field_std": 1.5729728557681881
+ },
+ "beta_0": {
+  "defects": 72,
+  "defects_over_frames": [
+   72,
+   88,
+   144,
+   120,
+   144
+  ],
+  "mean_defects": 113.6,
+  "shuffled_null": 228,
+  "field_std": 0.7443132450205786
+ }
+}
