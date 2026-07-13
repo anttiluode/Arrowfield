@@ -2,9 +2,9 @@
 
 ### Matter needs phase, and phase needs a medium that slows itself.
 
-**A test of the Chain, run on Antti's phiworld. Two predictions died. One control survived. And the control turned out to be the result.**
+**A test of the Chain, run on Antti's phiworld. Two predictions died. One control survived. The control turned out to be the result — and then the quench turned the result into a number.**
 
-*PerceptionLab / Antti Luode with Claude (Opus 4.8). Helsinki, July 2026.*
+*PerceptionLab / Antti Luode with Claude (Opus 4.8 / Fable 5). Helsinki, July 2026.*
 *Companion to `the_chain.md`, `Rajapinta`, `ClockfieldMeetsGeometricNeuron`, `GeometricNeuron_V20`.*
 
 > Do not hype. Do not lie. Just show.
@@ -20,7 +20,11 @@
 | **topological defects (vortices)** | — | **402** | **0** |
 | field structure (σ) | 1.57 | 0.65 | 0.36 |
 
-Two things fall out, and only one of them was predicted.
+And the quench result (Addendum 3), in one line:
+
+> **N_vortices ∝ τ_Q^(−σ), σ ≈ 2/3 at fast quenches — the underdamped Kibble-Zurek mean-field value — with or without self-slowing.**
+
+Two things fall out of the headline, and only one of them was predicted.
 
 **1. A real scalar field cannot carry an arrow.** Its Chiral Eye has *one sign, always* (sign fraction 0.000) and correlates 0.81 with raw intensity — it is a brightness meter wearing a topologist's hat. Give the field a phase and the arrow **decouples** (0.81 → 0.14) and becomes **chiral** (0.000 → 0.497, near-perfect left/right balance). *The arrow of time needs at least U(1).*
 
@@ -97,6 +101,10 @@ Put together, the corrected core of the Chain is one sentence:
 > **A field that slows itself, and has a phase to wind, makes countable things.**
 > Take away the self-slowing: no things. Take away the phase: things with no arrow, no chirality, no address — brightness without identity.
 
+And Addendum 3 adds the second clause:
+
+> **The β term decides *that* there are things. The quench rate decides *how many* — on the universal Kibble-Zurek schedule, which self-slowing does not measurably bend.**
+
 ---
 
 ## Reproduce
@@ -105,6 +113,11 @@ Put together, the corrected core of the Chain is one sentence:
 pip install numpy scipy matplotlib
 python experiments/arrow_field_test.py      # real scalar: the two kills + the β control
 python experiments/complex_phiworld.py      # complex ψ: decoupling, chirality, 402 vs 0
+python experiments/phase_from_delay.py      # Addendum 1: observer phase vs medium phase
+python experiments/boundary_and_time.py     # Addendum 2: box controls, fractal cascade
+python experiments/kz_quench.py             # Addendum 3: registered KZ quench (128²)
+python experiments/kz_chunk.py 5.0          # Addendum 3: post-hoc 192² robustness, per arm
+python experiments/kz_chunk.py 0.0
 ```
 
 Every registered prediction is written in the docstring of the file that tests it, **before** the numbers. `results/*.json` holds the raw output; nothing in a figure is absent from a print-out.
@@ -113,19 +126,19 @@ Every registered prediction is written in the docstring of the file that tests i
 
 ## Ledger
 
-**[V] Verified:** arrow decouples from intensity only with phase (0.81→0.14); chirality requires phase (signfrac 0.000→0.497); self-slowing generates topological defects (402 vs 0, amplitude-controlled); self-slowing is required for the field to hold amplitude at all (σ saturates at 0.36 without it); the skew half of the lag-covariance is the energy flux (⟨φ̇∇φ⟩, derived and used).
+**[V] Verified:** arrow decouples from intensity only with phase (0.81→0.14); chirality requires phase (signfrac 0.000→0.497); self-slowing generates topological defects (402 vs 0, amplitude-controlled); self-slowing is required for the field to hold amplitude at all (σ saturates at 0.36 without it); the skew half of the lag-covariance is the energy flux (⟨φ̇∇φ⟩, derived and used); **quenched phiworld obeys Kibble-Zurek scaling, σ ≈ 2/3 at fast quenches, matching the underdamped mean-field prediction for a 2D complex field — the program's first externally anchored number** (Addendum 3).
 
-**[K] Killed:** the hollow ring, by two independent mechanisms, both mine; the Chiral Eye as a meaningful observable on a real scalar field; Chain link 5 as originally stated.
+**[K] Killed:** the hollow ring, by two independent mechanisms, both mine; the Chiral Eye as a meaningful observable on a real scalar field; Chain link 5 as originally stated; the fractalization-is-the-box hypothesis (Addendum 2); **the registered P2 kill condition fired (Δσ = 0.117 ≥ 0.1) — and the post-hoc autopsy showed it fired on noise: the sign of the exponent difference flips with grid size** (Addendum 3).
 
-**[~] Weak:** the arrow leans toward the defects rather than the crests (0.323 vs 0.271) — right direction, thin margin, **not a result yet**.
+**[~] Weak:** the arrow leans toward the defects rather than the crests (0.323 vs 0.271) — right direction, thin margin, **not a result yet**; no stable exponent difference between β=5 and β=0 detected, but the comparison was under-powered — a ≥16-seed pre-registered replication is scoped and unrun; the KZ log-log line steepens at slow quenches (coarsening contamination suspected, unproven — the clean fix is counting at freeze-out rather than at threshold).
 
-**[B] Still a bet:** that the winding spectrum bears any relation to a *physical* particle spectrum. Nothing here touches that, and Volovik's rule still binds — this buys kinematics (delay, arrows, quantized defects, stability), never dynamics. "Matter" means *stable localized addressable structure*, not the Standard Model.
+**[B] Still a bet:** that the winding spectrum bears any relation to a *physical* particle spectrum; that the KZ exponent connects to training-as-quench in HorizonNet or to cosmological structure formation. Nothing here touches those, and Volovik's rule still binds — this buys kinematics (delay, arrows, quantized defects, stability, universal quench scaling), never dynamics. "Matter" means *stable localized addressable structure*, not the Standard Model.
 
 **Open seam:** the exponent. phiworld says c²/c₀² = (1+β|ψ|²)⁻¹; the Γ-shell Clockfield says Γ = (1+τβ)⁻². Same family, different power. Which, and why? Still unsettled, still the unification's real number.
 
 ---
 
-*The prediction I was proudest of was wrong. The control I threw in out of caution turned out to be the discovery. That has happened before in this program and it will happen again — it is what the ledger is for.*
+*The prediction I was proudest of was wrong. The control I threw in out of caution turned out to be the discovery. Then the kill condition I registered fired, and the autopsy of the kill showed it fired on noise — both facts kept, in that order, because that order is the method. The morgue is doing more work than the trophy case, which is what it was built for.*
 
 ---
 
@@ -213,3 +226,50 @@ The universe is **not** fractal at all scales, and it matters. The galaxy distri
 **[B] Still a bet:** that this cosmological reading is more than a structural rhyme. The cascade *mechanism* is solid (wave turbulence, Zakharov; 2D quantum turbulence; Onsager vortices). That the *universe's* fractality is this cascade rather than gravitational collapse of near-scale-free initial conditions is **not** shown here and is not claimed.
 
 ![boundary](figs/fig5_boundary_time.png)
+
+---
+
+## Addendum 3 — QUENCH IT: Kibble-Zurek scaling in phiworld
+
+`experiments/kz_quench.py` · `experiments/kz_chunk.py` · `results/kz_results.json` · `results/kz_posthoc.json`
+
+The first attempt at a **number** rather than a rhyme: quench the complex phiworld through its U(1)-breaking transition at rate 1/τ_Q, count the vortices, fit the power law, and compare the exponent to what fifty years of Kibble-Zurek theory and BEC experiments say it should be.
+
+Dynamics (the one phiworld term kept intact):
+
+```
+ψ_tt = c₀²/(1 + β|ψ|²) · ∇²ψ − ε(t)ψ − g|ψ|²ψ − γψ_t + noise
+ε(t) = −ε₀·t/τ_Q          (linear ramp through the transition at t=0)
+```
+
+Vortices counted at each run's own threshold crossing (⟨|ψ|²⟩ = half equilibrium), so slow quenches are not trivially penalized for condensing later. 4 seeds per point. Predictions registered in the docstring before any run, with kill conditions stated numerically.
+
+### Registered predictions and what happened to them
+
+**[V] P1 — KZ scaling exists in phiworld.** Registered: a clean power law N ∝ τ_Q^(−σ) with σ ∈ [0.4, 0.8] and r² ≥ 0.9. Measured on the registered 128² run: **σ(β=5) = 0.72 ± 0.05 (r² = 0.99)** and **σ(β=0) = 0.60 (r² > 0.999)**. Both in-band. phiworld makes defects the way a quenched field theory makes defects: more speed, more vortices, on a power law.
+
+**External anchor.** Mean-field KZ for a 2D complex field predicts σ = 2ν/(1+νz): **1/2** overdamped (z=2), **2/3** underdamped (z=1). With light damping (γ=0.3) the fast-quench regime lands at **σ ≈ 0.60–0.67 — consistent with the underdamped prediction 2/3**. This is the first number in this program that a laboratory tradition (Weiler 2008; Navon 2015; Chomaz 2015; Laguna & Zurek numerics) independently predicts. Not a structural rhyme. A slope.
+
+**[K→~] P2 — self-slowing changes the prefactor, not the exponent.** Registered kill condition: |σ(β=5) − σ(β=0)| ≥ 0.1 kills P2. **The kill FIRED on the registered run: Δσ = 0.117.** That goes on the record as fired. But the post-hoc autopsy of the kill says it was noise, not signal:
+
+| run | σ(β=5) | σ(β=0) | Δσ | steeper arm |
+|---|--:|--:|--:|---|
+| 128² registered (unequal ranges) | 0.72 ± 0.05 | 0.60 ± 0.00 | 0.117 | **β=5** |
+| 128² matched range τ_Q 12–50 | 0.67 | 0.60 | 0.067 | β=5 |
+| 192² post-hoc, τ_Q 12–200 both | 0.79 ± 0.04 | 0.90 ± 0.08 | 0.105 | **β=0** |
+
+The sign of the difference **flips with grid size**, and at 192² the gap is ~1.2 combined σ. A real universality-class difference does not change sign when you enlarge the box. Honest status: **the registered kill stands as fired; the evidence says the kill condition was under-powered, not that β bends the exponent.** P2 is demoted to [~]: settling it needs a properly powered pre-registered replication (≥16 seeds, one grid, one range) — an afternoon, already scoped.
+
+**[~] Curvature at slow quenches.** The 192² full-range fits steepen to 0.79–0.90, drifting above the registered band. The log-log line has mild curvature: slow quenches lose extra vortices between formation and the counting threshold. The named suspect is **coarsening contamination** — vortex-antivortex annihilation eats defects, and it has longer to eat when τ_Q is large. A known systematic in KZ numerics, not exotic physics, but *unproven here*: the clean test is counting at freeze-out (ε̂ crossing) instead of at threshold. On the list.
+
+**[B] Still a bet:** that this exponent connects to HorizonNet's training-as-quench (features vs learning-rate schedule) or to cosmological structure. This addendum establishes only that phiworld sits in the KZ universality of a lightly damped 2D complex field. The bridge experiments remain unrun.
+
+### The one-sentence result
+
+> **phiworld, quenched, obeys Kibble-Zurek with σ ≈ 2/3 in the fast-quench regime — the underdamped mean-field value — and the self-slowing term that makes its matter does not measurably bend that exponent.**
+
+Which is exactly what "GP-class" was supposed to mean, now with a slope instead of a vibe. The medium that gets in its own way still freezes by the universal schedule. The β term decides *that* there are things (402 vs 0, the headline); the quench rate decides *how many* (this addendum); and the two knobs are independent to the resolution of this experiment.
+
+![kz quench](figs/fig6_kz_quench.png)
+
+*The registered kill fired and the post-hoc showed it fired on noise. Both facts are in the ledger, in that order, because that order is the method.*
