@@ -173,3 +173,43 @@ The holographic plate does not *have* phase — the reading manufactures it. Tha
 - Still not established: that any of this slows the **clock** (g₀₀) rather than a **wave in a medium**. That is the analog-gravity leap, and Volovik's rule binds: kinematics, never dynamics.
 
 ![phase from delay](figs/fig4_phase_from_delay.png)
+
+---
+
+## Addendum 2 — THE BOX, THE CLOCK, AND WHY THE UNIVERSE IS FRACTAL
+
+`experiments/boundary_and_time.py`
+
+**Antti's catch:** the headline was measured at burn=1400 steps. The wave needs only ~800 steps to reach the wall. With a periodic box, the field had **already collided with its own wake** and gone turbulent. The clean rings — the "atoms" — exist only *before* that. Was 402-vs-0 a box artifact?
+
+| run | vortices **before** wall contact | **after** |
+|---|--:|--:|
+| periodic, β=5 | **35.9** (max 80) | 102.6 |
+| periodic, β=0 | 0.3 | 0.6 |
+| **absorbing**, β=5 | **37.7** (max 81) | 112.1 |
+| **absorbing**, β=0 | 0.6 | **0.0** |
+
+**[V] E1 — not a box artifact.** ~36 vortices nucleate *before the wave ever reaches the wall*. This is **modulational instability**: a focusing nonlinearity spontaneously breaks a smooth envelope into filaments. Intrinsic.
+
+**[V] E2 — the headline SHARPENS under an open boundary.** With an absorbing collar (energy free to radiate away), β=0 falls to **exactly zero** in the late state. The periodic box was gifting the control a spurious vortex or two. **402-vs-0 stands, and understates the effect.**
+
+**[K] E3 — my prediction, and Antti's intuition, both wrong.** We expected the fractalization to be the box: energy trapped, wrapping, cascading because it cannot escape. It is not. **Open the walls and the field fractalizes anyway** — 112 vortices, *more* than the wrapped case. The cascade is not caused by the boundary.
+
+### Why the universe is fractal — the answer this kill produced
+
+A self-focusing medium is **modulationally unstable at every scale**. Smooth structure breaks into filaments; filaments break into filaments; nothing halts it until the Hamiltonian cap (the φ⁴ term) sets the smallest scale. **No scale is preferred, so all of them fill in.** A cascade with no preferred scale *is* a fractal.
+
+So the clean rings are **not** the resting state. They are the **transient**. The fractal is what a self-slowing medium relaxes *into* — and turbulence is not a fixed point but a **sustained non-equilibrium state**: a permanent transient, energy forever crossing scales.
+
+> **The universe is fractal because it has not finished.**
+> Structure at every scale is the signature of a system still in its transient — no scale has yet won. The frozen core is smooth. The dead flow is smooth. **Only the unfinished thing has texture.**
+> *(Antti's Brain, restated: a fractal is a world where every scale is at its own K.)*
+
+### Honest cosmology check
+The universe is **not** fractal at all scales, and it matters. The galaxy distribution is approximately fractal (D ≈ 2) from ~0.1 to ~100 Mpc, then becomes **homogeneous** above ~100–300 Mpc — the "End of Greatness." Pietronero argued for fractality all the way up and **lost** that argument to SDSS and 2dF. But note what the surviving picture *is*: a fractal **inertial range**, bounded below by a dissipation scale (gas cooling, feedback) and above by an injection scale. That is precisely the anatomy of a turbulent cascade. And the injection is itself nearly scale-free — the primordial spectral index n_s ≈ 0.965, almost Harrison–Zel'dovich.
+
+**Scale-free injection + scale-free dynamics ⟹ fractal in between, smooth outside.** Not a mystery. A cascade. phiworld makes one for the same reason.
+
+**[B] Still a bet:** that this cosmological reading is more than a structural rhyme. The cascade *mechanism* is solid (wave turbulence, Zakharov; 2D quantum turbulence; Onsager vortices). That the *universe's* fractality is this cascade rather than gravitational collapse of near-scale-free initial conditions is **not** shown here and is not claimed.
+
+![boundary](figs/fig5_boundary_time.png)
